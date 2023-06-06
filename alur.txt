@@ -1,0 +1,21 @@
+1. Membuat package entity dan isinya category.go
+   pada category.go, kita harus membuat struct di file category.go pada package entity
+
+2. Membuat Repository yang isinya ada interface. caranya :
+    - bikin package repository
+    - dalam package/folder repository, bikin file dengan nama category_repository.go
+    - bikin interface dan kontraknya
+
+3. Membuat package service, didalamnya bikin file category_service.go
+    - pada file tersebut, ada struct CatgoryService yang isinya package dari repository dan interfacenya 
+    - setelah itu buat func untuk menjalankan simulasi query dari kontrak interface repository
+
+4. Membuat Mock pada package repository. caranya :
+    - membuat file baru dengan nama category_repository_mock.go
+    - membuat struct yang isinya Mock
+    - membuat func untuk implementasi kontrak dari interface yang ada di file category_repository
+
+5. Memuat test untuk package service. caranya dan isi file tersebut :
+    - pada package service, buat file baru namanya category_service_test.go
+    - pada file tesrsebut, ada program untuk memanggil mock
+    - func test yang isinya ada program mock
